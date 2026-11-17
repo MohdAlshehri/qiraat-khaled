@@ -2,147 +2,498 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>قراءات خالد الواصل — نموذج</title>
-<meta name="theme-color" content="#7A4E2D">
-
+<meta name="theme-color" content="#17365D">
+<title>خالد الواصل — كتب واقتباسات وخواطر</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#FAF6EE}
-a{color:#7A4E2D}a:hover{color:#2B2118}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px}
-.hero-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media (max-width:900px){.hero-in{grid-template-columns:1fr}.nav-links{display:none}}
-.act{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:1px solid #E6DCCB;border-radius:10px;background:#FFFFFF;color:#5C3B21;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:14px;cursor:pointer}
-.act:hover{background:#F3EBDD}
-.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #E6DCCB;background:#FFFFFF;color:#5C3B21;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;cursor:pointer}
-</style>
+:root{
+  --navy:#17365D; --navy2:#344F70; --gold:#D9B978; --ivory:#F7F3E8; --mist:#DCE5EF;
+  --ink:#14243A; --muted:#55657A; --gold-ink:#7D6024; --line:#E4DCC8; --card:#FFFDF8;
+  --r:18px; --shadow:0 1px 2px rgba(23,54,93,.06),0 8px 24px rgba(23,54,93,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.amiri{font-family:Amiri,serif}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
+/* date bar + header */
+.datebar{background:var(--navy);color:#C9D5E6;font-size:13px;text-align:center;padding:6px 12px}
+header.top{position:sticky;top:0;z-index:30;background:rgba(247,243,232,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.mark{width:42px;height:42px;border-radius:12px;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-family:Amiri,serif;font-size:24px;line-height:1;padding-bottom:4px}
+.brand b{display:block;font-family:Amiri,serif;font-size:19px;line-height:1.6;font-weight:700}
+.brand small{display:block;font-size:12.5px;color:var(--muted);line-height:1.5}
+.tabs{display:flex;gap:4px;background:#EEE7D6;padding:4px;border-radius:14px}
+.tabs a{display:flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:500;font-size:15px;transition:background .2s,color .2s}
+.tabs a.on{background:var(--navy);color:#fff}
+.tabs a:not(.on):hover{color:var(--navy);background:#E6DDC8}
+.tabs .n{font-size:12px;background:rgba(255,255,255,.18);border-radius:999px;padding:0 8px;line-height:20px}
+.tabs a:not(.on) .n{background:#E0D6BF;color:var(--navy2)}
+.iconbtn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--navy);display:grid;place-items:center;cursor:pointer}
+.iconbtn:hover{background:#fff;border-color:#D2C6A8}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(217,185,120,.18) 1px,transparent 1.4px);background-size:22px 22px;mask-image:linear-gradient(to bottom,#000 30%,transparent);-webkit-mask-image:linear-gradient(to bottom,#000 30%,transparent)}
+.hero .wrap{position:relative;padding-top:56px;padding-bottom:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:14px;font-weight:500}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--gold)}
+.hero h1{margin:10px 0 6px;font-family:Amiri,serif;font-weight:700;font-size:clamp(44px,8vw,78px);line-height:1.35}
+.hero .tag{margin:0;font-family:Amiri,serif;font-size:clamp(20px,3vw,26px);color:#DCE5EF}
+.search{margin-top:28px;display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:0 16px;min-height:58px;max-width:560px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.search input{flex:1;border:0;outline:0;background:transparent;font:inherit;font-size:16px;color:var(--ink);min-height:56px}
+.search svg{color:var(--navy2);flex-shrink:0}
+.clear{border:0;background:#EEF2F7;color:var(--navy);width:32px;height:32px;border-radius:50%;cursor:pointer;display:none}
+.search.has .clear{display:grid;place-items:center}
+
+.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
+.door{position:relative;display:flex;flex-direction:column;gap:6px;padding:20px 20px 18px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid rgba(217,185,120,.28);color:#fff;text-decoration:none;transition:transform .25s,background .25s,border-color .25s;overflow:hidden}
+.door:hover{transform:translateY(-3px);background:rgba(255,255,255,.1);border-color:var(--gold)}
+.door .ic{width:46px;height:46px;border-radius:12px;background:var(--gold);color:var(--navy);display:grid;place-items:center;margin-bottom:6px}
+.door b{font-family:Amiri,serif;font-size:26px;line-height:1.4}
+.door span{font-size:14px;color:#C9D5E6}
+.door i{position:absolute;left:18px;top:18px;font-style:normal;font-family:Amiri,serif;font-size:40px;line-height:1;color:var(--gold);opacity:.9}
+
+/* sections */
+section.part{padding:72px 0 24px}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.head h2{margin:0;font-family:Amiri,serif;font-size:clamp(32px,4.5vw,44px);line-height:1.3;color:var(--navy);display:flex;align-items:center;gap:14px}
+.head h2 .num{font-family:'IBM Plex Sans Arabic',sans-serif;font-size:13px;font-weight:600;color:var(--gold-ink);background:#F0E6CC;border-radius:999px;padding:2px 12px;line-height:24px}
+.head p{margin:4px 0 0;color:var(--muted);max-width:520px}
+.empty{display:none;padding:28px;border:1.5px dashed #D2C6A8;border-radius:var(--r);text-align:center;color:var(--muted)}
+
+/* books: shelf */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:40px 28px}
+.book{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:12px;text-align:right}
+.book .cv{position:relative;aspect-ratio:3/4;border-radius:6px 10px 10px 6px;overflow:hidden;background:var(--mist);box-shadow:inset 6px 0 10px -6px rgba(0,0,0,.25),0 2px 4px rgba(23,54,93,.12),0 14px 28px -10px rgba(23,54,93,.35);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.book .cv img{width:100%;height:100%;object-fit:cover}
+.book .cv::after{content:"";position:absolute;inset:0 auto 0 0;width:10px;background:linear-gradient(90deg,rgba(0,0,0,.18),transparent)}
+.book:hover .cv,.book:focus-visible .cv{transform:translateY(-6px) rotate(-1deg);box-shadow:0 4px 8px rgba(23,54,93,.14),0 24px 40px -12px rgba(23,54,93,.45)}
+.book .base{height:10px;margin-top:-6px;border-radius:0 0 6px 6px;background:var(--navy2);box-shadow:0 6px 10px -4px rgba(23,54,93,.4)}
+.book b{display:block;font-family:Amiri,serif;font-size:19px;line-height:1.5;color:var(--navy)}
+.book small{display:block;font-size:14px;color:var(--muted)}
+.badge{position:absolute;top:10px;right:10px;background:var(--gold);color:var(--navy);font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px;line-height:22px}
+
+/* quotes: stage */
+.stage{position:relative;background:var(--navy);color:#fff;border-radius:28px;padding:clamp(28px,6vw,64px);overflow:hidden;min-height:340px;touch-action:pan-y}
+.stage::before{content:"”";position:absolute;top:-40px;left:24px;font-family:Amiri,serif;font-size:260px;line-height:1;color:var(--gold);opacity:.16;pointer-events:none}
+.stage::after{content:"";position:absolute;inset:auto -80px -120px auto;width:300px;height:300px;border-radius:50%;border:1px solid rgba(217,185,120,.25);pointer-events:none}
+.slide{display:none;position:relative;z-index:1;animation:fade .45s ease}
+.slide.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.slide blockquote{margin:0;font-family:Amiri,serif;font-size:clamp(22px,3.4vw,34px);line-height:1.95;white-space:pre-line;max-width:900px}
+.slide .src{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.slide .src img{width:46px;height:62px;object-fit:cover;border-radius:4px;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.slide .src b{display:block;color:var(--gold);font-family:Amiri,serif;font-size:20px;line-height:1.5}
+.slide .src small{color:#C9D5E6;font-size:14px}
+.slide.sample blockquote{color:#AFC0D6}
+.stage-nav{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:30px;flex-wrap:wrap}
+.dots{display:flex;gap:8px}
+.dots button{width:10px;height:10px;border-radius:999px;border:0;background:rgba(255,255,255,.3);cursor:pointer;padding:0;transition:width .3s,background .3s}
+.dots button.on{width:28px;background:var(--gold)}
+.arrows{display:flex;gap:8px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;display:grid;place-items:center}
+.arrows button:hover{background:rgba(255,255,255,.1);border-color:var(--gold)}
+
+/* actions */
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.act{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--navy);font-size:14px;font-weight:500;cursor:pointer;text-decoration:none}
+.act:hover{background:#fff;border-color:#CDBF9C}
+.stage .act{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff}
+.stage .act:hover{background:rgba(255,255,255,.14);border-color:var(--gold)}
+.act.gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.stage .act.gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+
+/* thoughts: notebook timeline */
+.journal{position:relative;display:grid;gap:22px;padding-right:34px}
+.journal::before{content:"";position:absolute;right:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--mist))}
+.note{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px 18px;box-shadow:var(--shadow);border-top:3px solid var(--gold)}
+.note::before{content:"";position:absolute;right:-31px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--ivory);border:3px solid var(--navy)}
+.note time{display:inline-block;font-size:13px;color:var(--gold-ink);background:#F3EAD3;border-radius:999px;padding:0 12px;line-height:26px;margin-bottom:6px}
+.note p{margin:0 0 12px;font-family:Amiri,serif;font-size:21px;line-height:38px;white-space:pre-line;color:var(--ink)}
+.note .ref{font-size:14px;color:var(--muted);margin:-4px 0 12px}
+.note.sample p{color:#8593A5}
+.tagx{font-size:12px;font-weight:600;color:var(--navy2);background:var(--mist);border-radius:999px;padding:0 10px;line-height:22px;margin-inline-start:6px}
+
+/* dialog */
+dialog{border:0;padding:0;border-radius:24px;max-width:min(860px,94vw);width:100%;background:var(--ivory);color:var(--ink);box-shadow:0 30px 80px rgba(10,25,45,.45)}
+dialog::backdrop{background:rgba(14,30,52,.6);backdrop-filter:blur(3px)}
+.dlg{display:grid;grid-template-columns:260px 1fr;gap:28px;padding:28px;max-height:88vh;overflow:auto}
+.dlg .cv{border-radius:8px;overflow:hidden;box-shadow:0 14px 30px -10px rgba(23,54,93,.45);align-self:start}
+.dlg h3{margin:0;font-family:Amiri,serif;font-size:32px;line-height:1.4;color:var(--navy)}
+.dlg .by{color:var(--muted);margin:2px 0 14px}
+.dlg .txt{font-family:Amiri,serif;font-size:21px;line-height:2;white-space:pre-line;margin:0 0 14px}
+.dlg .mine{border-right:3px solid var(--gold);padding-right:14px;margin:0 0 18px;color:var(--navy2)}
+.dlg .meta{font-size:14px;color:var(--muted);margin-bottom:16px}
+.x{position:absolute;top:14px;left:14px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--navy);cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow)}
+
+/* footer + mobile nav */
+footer{margin-top:80px;background:var(--navy);color:#C9D5E6;padding:40px 0 34px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+footer b{font-family:Amiri,serif;font-size:22px;color:#fff;font-weight:700;display:block;line-height:1.6}
+footer a{color:var(--gold)}
+.bnav{display:none}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;font-size:14px;opacity:0;pointer-events:none;transition:.3s;z-index:60}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.hidden{display:none !important}
+
+@media (max-width:860px){
+  .tabs{display:none}
+  .doors{grid-template-columns:1fr;gap:10px}
+  .door{flex-direction:row;align-items:center;gap:14px;padding:14px 16px}
+  .door .ic{margin:0;flex-shrink:0}
+  .door b{font-size:22px}
+  .door span{display:none}
+  .door i{position:static;margin-inline-start:auto;font-size:30px}
+  .dlg{grid-template-columns:1fr;padding:22px}
+  .dlg .cv{max-width:200px}
+  .bnav{display:flex;position:fixed;inset:auto 12px calc(12px + env(safe-area-inset-bottom)) 12px;z-index:40;background:rgba(23,54,93,.96);backdrop-filter:blur(10px);border-radius:20px;padding:6px;box-shadow:0 10px 30px rgba(10,25,45,.35)}
+  .bnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:54px;justify-content:center;border-radius:14px;color:#AFC0D6;text-decoration:none;font-size:12.5px}
+  .bnav a.on{background:rgba(217,185,120,.16);color:var(--gold)}
+  footer{padding-bottom:120px}
+  .toast{bottom:100px}
+  section.part{padding-top:56px}
+}
+@media (max-width:420px){
+  .wrap{padding:0 16px}
+  .shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+  .brand small{display:none}
+  .journal{padding-right:26px}
+  .note{padding:18px 18px 14px}
+  .note::before{right:-24px}
+  .journal::before{right:7px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 
-<div dir="rtl" style="font-family: 'IBM Plex Sans Arabic', sans-serif; color: #2B2118; background: #FAF6EE; min-height: 100vh">
+<div class="datebar" id="today">&nbsp;</div>
 
-<div style="background: #F3EBDD; color: #6B5A4A; font-size: 13px; text-align: center; padding: 8px 16px">الأحد ٥ جمادى الآخرة ١٤٤٨هـ • 15 نوفمبر 2026م</div>
-
-<header style="position: sticky; top: 0; z-index: 5; background: #FFFFFF; border-bottom: 1px solid #E6DCCB">
-<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-<a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 2px">
-<span style="font-family: Amiri, serif; font-size: 18px; line-height: 1.6; color: #A86B3C">قراءات</span>
-<span style="font-family: Amiri, serif; font-size: 18px; line-height: 1.6; color: #A86B3C">خالد الواصل</span>
-</a>
-<nav class="nav-links" style="display: flex; gap: 28px; font-size: 15px">
-<a href="#" style="text-decoration: none; color: #2B2118; font-weight: 600">الرئيسية</a>
-<a href="#" style="text-decoration: none; color: #5C4A3A">كل القراءات</a>
-<a href="#" style="text-decoration: none; color: #5C4A3A">الموضوعات</a>
-<a href="#" style="text-decoration: none; color: #5C4A3A">عن المدونة</a>
-</nav>
-<button class="act" aria-label="بحث"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></button>
-</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="الرئيسية">
+      <span class="mark" aria-hidden="true">خ</span>
+      <span><b>خالد الواصل</b><small>كتب • اقتباسات • خواطر</small></span>
+    </a>
+    <nav class="tabs" aria-label="الأقسام">
+      <a href="#books" data-s="books">كتب <span class="n" data-count="books"></span></a>
+      <a href="#quotes" data-s="quotes">اقتباسات <span class="n" data-count="quotes"></span></a>
+      <a href="#thoughts" data-s="thoughts">خواطر <span class="n" data-count="thoughts"></span></a>
+    </nav>
+    <button class="iconbtn" id="goSearch" aria-label="بحث">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </button>
+  </div>
 </header>
 
-<section style="padding: 64px 24px 56px; border-bottom: 1px solid #E6DCCB">
-<div class="hero-in" style="max-width: 1200px; margin: 0 auto">
-<div style="display: flex; flex-direction: column; gap: 18px">
-<span style="font-size: 14px; color: #A86B3C; letter-spacing: 0">مدونة قراءات واقتباسات</span>
-<h1 style="margin: 0; font-family: Amiri, serif; font-weight: 700; font-size: 64px; line-height: 1.4; color: #2B2118">خالد الواصل</h1>
-<p style="margin: 0; font-family: Amiri, serif; font-size: 24px; line-height: 1.8; color: #7A4E2D">كتب قرأتها، وكلمات استوقفتني</p>
-<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #5C4A3A; max-width: 480px">[وصف المدونة بكلمات الأستاذ خالد]</p>
-<label style="display: flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 14px; padding: 0 16px; min-height: 56px; max-width: 480px; margin-top: 8px">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A86B3C" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-<span style="position: absolute; width: 1px; height: 1px; overflow: hidden">بحث</span>
-<input type="search" placeholder="ابحث باسم كتاب أو مؤلف أو كلمة…" style="flex: 1; border: 0; outline: 0; background: transparent; font-family: inherit; font-size: 16px; color: #2B2118; min-height: 54px">
-</label>
-</div>
-
-<article style="background: #FFFFFF; border: 1px solid #E6DCCB; border-top: 4px solid #7A4E2D; border-radius: 4px 4px 18px 18px; padding: 28px; display: flex; gap: 24px; position: relative">
-<span style="position: absolute; top: -18px; right: 24px; background: #7A4E2D; color: #FAF6EE; font-size: 13px; padding: 6px 14px; border-radius: 999px">اقتباس اليوم</span>
-<img src="images/book-1.jpg" alt="غلاف كتاب ذكريات عمر أكلته الحروف" style="width: 150px; height: 210px; object-fit: cover; border-radius: 8px; flex-shrink: 0">
-<div style="display: flex; flex-direction: column; gap: 14px; min-width: 0">
-<svg width="34" height="26" viewBox="0 0 34 26" aria-hidden="true"><path d="M0 26V14C0 6 4 1 13 0l1 4C9 5 7 8 7 12h6v14H0zm20 0V14c0-8 4-13 13-14l1 4c-5 1-7 4-7 8h6v14H20z" fill="#C9A15B" opacity="0.5"></path></svg>
-<p style="margin: 0; font-family: Amiri, serif; font-size: 21px; line-height: 2; color: #2B2118; white-space: pre-line">منذأن عرفت كلمة كتاب وأنا أرغب في الانتماء إليه بوصفه وطنا، إما:
-عن طريق إضافة كتب إليه من جانبي الشخصي
-وإما عن طريق العمل على إشاعة الكتاب الذي يكتبه غيري
-أي أن أكون مساهما في عملية نشر الكتاب</p>
-<p style="margin: 0; font-size: 14px; color: #7A4E2D; font-weight: 600">ذكريات عمر أكلته الحروف • نجيب المانع</p>
-</div>
-</article>
-</div>
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">مدونة شخصية</span>
+    <h1>خالد الواصل</h1>
+    <p class="tag">كتب قرأتها، وكلمات استوقفتني، وخواطر كتبتها</p>
+    <label class="search" id="sbox">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span class="sr">ابحث في المدونة</span>
+      <input id="q" type="search" placeholder="ابحث في الكتب والاقتباسات والخواطر…" autocomplete="off">
+      <button type="button" class="clear" id="clr" aria-label="مسح البحث">✕</button>
+    </label>
+    <div class="doors">
+      <a class="door" href="#books">
+        <span class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6.5A2.5 2.5 0 0 0 4 21.5v0A2.5 2.5 0 0 1 6.5 19H19"/></svg></span>
+        <b>كتب</b><span>قراءات وتعريف بكتب تستحق</span><i data-count="books"></i>
+      </a>
+      <a class="door" href="#quotes">
+        <span class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5c0 3-2 5-5 6"/><path d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5c0 3-2 5-5 6"/></svg></span>
+        <b>اقتباسات</b><span>عبارات منتقاة من بطون الكتب</span><i data-count="quotes"></i>
+      </a>
+      <a class="door" href="#thoughts">
+        <span class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+        <b>خواطر</b><span>تأملات وكلمات بقلم خالد</span><i data-count="thoughts"></i>
+      </a>
+    </div>
+  </div>
 </section>
 
-<section style="max-width: 1200px; margin: 0 auto; padding: 48px 24px 0">
-<div style="display: flex; flex-wrap: wrap; gap: 10px">
-<button class="chip" style="background: #7A4E2D; color: #FAF6EE; border-color: #7A4E2D">كل القراءات</button>
-<button class="chip">سير وذكريات</button>
-<button class="chip">جودة الحياة</button>
-<button class="chip">[موضوع]</button>
-</div>
+<section class="part" id="books">
+  <div class="wrap">
+    <div class="head">
+      <div><h2>كتب <span class="num" data-count="books"></span></h2><p>اضغط على أي كتاب لقراءة التعريف به.</p></div>
+    </div>
+    <div class="shelf" id="shelf"></div>
+    <div class="empty" id="e-books">لا توجد كتب تطابق البحث.</div>
+  </div>
 </section>
 
-<section style="max-width: 1200px; margin: 0 auto; padding: 36px 24px 72px">
-<h2 style="margin: 0 0 28px; font-family: Amiri, serif; font-size: 32px; font-weight: 700; color: #2B2118">أحدث القراءات</h2>
-<div class="grid">
-
-<article style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="position: relative">
-<img src="images/book-1.jpg" alt="غلاف كتاب ذكريات عمر أكلته الحروف" style="display: block; width: 100%; height: 280px; object-fit: cover">
-<span style="position: absolute; top: 14px; right: 14px; background: #C9A15B; color: #2B2118; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 999px">جديد</span>
-</div>
-<div style="padding: 24px 26px; display: flex; flex-direction: column; gap: 16px; flex: 1">
-<div style="display: flex; align-items: center; gap: 8px; color: #7A4E2D; font-size: 14px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"></path><path d="M4 21V5"></path></svg>ذكريات عمر أكلته الحروف • نجيب المانع</div>
-<blockquote style="margin: 0; padding: 0 18px 0 0; border-right: 3px solid #C9A15B; border-radius: 0; font-family: Amiri, serif; font-size: 20px; line-height: 2; color: #2B2118; white-space: pre-line">منذأن عرفت كلمة كتاب وأنا أرغب في الانتماء إليه بوصفه وطنا، إما:
-عن طريق إضافة كتب إليه من جانبي الشخصي
-وإما عن طريق العمل على إشاعة الكتاب الذي يكتبه غيري
-أي أن أكون مساهما في عملية نشر الكتاب</blockquote>
-<p style="margin: 0; font-size: 16px; line-height: 1.9; color: #5C4A3A">كلمة جميلة في حب هذا الهدف ونشره</p>
-<div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #F0E8DA; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
-<span style="font-size: 13px; color: #6B5A4A">٥ جمادى الآخرة ١٤٤٨هـ • 15 نوفمبر 2026م</span>
-<span style="font-size: 13px; color: #5C3B21; background: #F3EBDD; padding: 4px 12px; border-radius: 999px">سير وذكريات</span>
-</div>
-<div style="display: flex; gap: 8px; flex-wrap: wrap">
-<button class="act"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a1 1 0 0 1 1-1h10"></path></svg>نسخ</button>
-<button class="act"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path></svg>شاركها في الحالة</button>
-<button class="act"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1"></path><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"></path></svg>رابط</button>
-<a class="act" href="https://x.com/khaledalwasel/status/2121951147783229671" style="text-decoration: none">عرض على X</a>
-</div>
-</div>
-</article>
-
-<article style="background: #FFFFFF; border: 1px solid #E6DCCB; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<img src="images/book-2.jpg" alt="غلاف كتاب رفاهية الروح" style="display: block; width: 100%; height: 280px; object-fit: cover; object-position: top">
-<div style="padding: 24px 26px; display: flex; flex-direction: column; gap: 16px; flex: 1">
-<div style="display: flex; align-items: center; gap: 8px; color: #7A4E2D; font-size: 14px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"></path><path d="M4 21V5"></path></svg>رفاهية الروح • خالد المنيف</div>
-<p style="margin: 0; font-family: Amiri, serif; font-size: 20px; line-height: 2; color: #2B2118; white-space: pre-line">يقدم المؤلف ٣٠٠قاعدة تهدف إلى تحسين جودة الحياة وتحقيق السلام النفسي وراحة البال،
-ويتناول مجموعة من الأفكارالتي تساعد الإنسان على فهم نفسه والتعامل مع تحديات الحياة بحكمة،
-ويؤكد أن السعادة ليست مرتبطة بكثرة الممتلكات وإنما بقدرة الفرد على الاستمتاع بالحياة والرضا بمالديه•</p>
-<div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #F0E8DA; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
-<span style="font-size: 13px; color: #6B5A4A">٢٤ جمادى الأولى ١٤٤٨هـ • 4 نوفمبر 2026م</span>
-<span style="font-size: 13px; color: #5C3B21; background: #F3EBDD; padding: 4px 12px; border-radius: 999px">جودة الحياة</span>
-</div>
-<div style="display: flex; gap: 8px; flex-wrap: wrap">
-<button class="act"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V5a1 1 0 0 1 1-1h10"></path></svg>نسخ</button>
-<button class="act"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path></svg>شاركها في الحالة</button>
-<button class="act"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1"></path><path d="M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"></path></svg>رابط</button>
-<a class="act" href="https://x.com/khaledalwasel/status/2117863822601945465" style="text-decoration: none">عرض على X</a>
-</div>
-</div>
-</article>
-
-</div>
+<section class="part" id="quotes">
+  <div class="wrap">
+    <div class="head">
+      <div><h2>اقتباسات <span class="num" data-count="quotes"></span></h2><p>اسحب يميناً ويساراً للتنقل، وشارك أي اقتباس صورةً في حالة الواتس.</p></div>
+    </div>
+    <div class="stage" id="stage" aria-roledescription="عرض متتابع" aria-label="الاقتباسات">
+      <div id="slides"></div>
+      <div class="stage-nav">
+        <div class="dots" id="dots" role="tablist" aria-label="اختيار اقتباس"></div>
+        <div class="arrows">
+          <button id="prev" aria-label="الاقتباس السابق"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+          <button id="next" aria-label="الاقتباس التالي"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="empty" id="e-quotes">لا توجد اقتباسات تطابق البحث.</div>
+  </div>
 </section>
 
-<footer style="background: #7A4E2D; color: #FAF6EE; padding: 40px 24px">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap">
-<div style="display: flex; flex-direction: column; gap: 2px">
-<span style="font-family: Amiri, serif; font-size: 20px; line-height: 1.6">قراءات خالد الواصل</span>
-<a href="https://x.com/khaledalwasel" style="color: #F3E3C3; font-size: 14px">@KhaledAlwasel</a>
-</div>
-<p style="margin: 0; font-size: 14px; color: #F3E3C3">تصميم وإعداد: محمد الشهري • للتواصل: <a href="https://wa.me/966564824329" style="color: #FAF6EE">0564824329</a></p>
-</div>
+<section class="part" id="thoughts">
+  <div class="wrap">
+    <div class="head">
+      <div><h2>خواطر <span class="num" data-count="thoughts"></span></h2><p>كلمات وتأملات بقلم الأستاذ خالد، الأحدث أولاً.</p></div>
+    </div>
+    <div class="journal" id="journal"></div>
+    <div class="empty" id="e-thoughts">لا توجد خواطر تطابق البحث.</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>خالد الواصل</b><a href="https://x.com/khaledalwasel">@KhaledAlwasel</a></div>
+    <div>تصميم وإعداد: محمد الشهري • للتواصل: <a href="https://wa.me/966564824329">0564824329</a></div>
+  </div>
 </footer>
-</div>
 
+<nav class="bnav" aria-label="الأقسام">
+  <a href="#books" data-s="books"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6.5A2.5 2.5 0 0 0 4 21.5A2.5 2.5 0 0 1 6.5 19H19"/></svg>كتب</a>
+  <a href="#quotes" data-s="quotes"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5c0 3-2 5-5 6"/><path d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5c0 3-2 5-5 6"/></svg>اقتباسات</a>
+  <a href="#thoughts" data-s="thoughts"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>خواطر</a>
+  <a href="#top" id="bsearch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>بحث</a>
+</nav>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <button class="x" id="dlgX" aria-label="إغلاق"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="dlg" id="dlgBody"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ===== البيانات (تصير لاحقاً blog.json) ===== */
+const SITE = { name:'خالد الواصل', handle:'khaledalwasel', url:location.href.split('#')[0] };
+
+const BOOKS = [
+  { id:'2121951147783229671', title:'ذكريات عمر أكلته الحروف', author:'نجيب المانع', cover:'images/book-1.jpg',
+    text:'(منذأن عرفت كلمة كتاب وأنا أرغب في الانتماء إليه بوصفه وطنا، إما:\nعن طريق إضافة كتب إليه من جانبي الشخصي\nوإما عن طريق العمل على إشاعة الكتاب الذي يكتبه غيري\nأي أن أكون مساهما في عملية نشر الكتاب)',
+    note:'كلمة جميلة في حب هذا الهدف ونشره', cat:'سير وذكريات' },
+  { id:'2117863822601945465', title:'رفاهية الروح', author:'خالد المنيف', cover:'images/book-2.jpg',
+    text:'يقدم المؤلف ٣٠٠قاعدة تهدف إلى تحسين جودة الحياة وتحقيق السلام النفسي وراحة البال،\nويتناول مجموعة من الأفكارالتي تساعد الإنسان على فهم نفسه والتعامل مع تحديات الحياة بحكمة،\nويؤكد أن السعادة ليست مرتبطة بكثرة الممتلكات وإنما بقدرة الفرد على الاستمتاع بالحياة والرضا بمالديه•',
+    note:'', cat:'جودة الحياة' }
+];
+
+const QUOTES = [
+  { id:'2121951147783229671', text:'منذأن عرفت كلمة كتاب وأنا أرغب في الانتماء إليه بوصفه وطنا، إما:\nعن طريق إضافة كتب إليه من جانبي الشخصي\nوإما عن طريق العمل على إشاعة الكتاب الذي يكتبه غيري\nأي أن أكون مساهما في عملية نشر الكتاب',
+    book:'ذكريات عمر أكلته الحروف', author:'نجيب المانع', cover:'images/book-1.jpg' },
+  { id:'s1', sample:true, text:'[هنا يظهر اقتباس آخر من اقتباسات الأستاذ خالد]', book:'[اسم الكتاب]', author:'[المؤلف]' }
+];
+
+const THOUGHTS = [
+  { id:'2121951147783229671', text:'كلمة جميلة في حب هذا الهدف ونشره', ref:'تعليقاً على: ذكريات عمر أكلته الحروف' },
+  { id:'s2', sample:true, date:'2026-10-20', text:'[هنا تظهر خاطرة من خواطر الأستاذ خالد،\nبأسطرها كما كتبها]' }
+];
+
+/* ===== أدوات ===== */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const idDate = id => /^\d{15,}$/.test(id) ? new Date(Number((BigInt(id) >> 22n) + 1288834974657n)) : null;
+const dOf = o => idDate(o.id) || (o.date ? new Date(o.date + 'T12:00:00+03:00') : null);
+const hij = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura', {day:'numeric', month:'long', year:'numeric', timeZone:'Asia/Riyadh'});
+const greg = new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn', {day:'numeric', month:'long', year:'numeric', timeZone:'Asia/Riyadh'});
+const both = d => d ? `${hij.format(d)} • ${greg.format(d)}` : '';
+const xUrl = id => /^\d{15,}$/.test(id) ? `https://x.com/${SITE.handle}/status/${id}` : null;
+const norm = s => String(s||'').replace(/[ً-ْـ]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').toLowerCase();
+function plural(n, one, two, few, many){ if(n===1) return one; if(n===2) return two; const t=n%100; if(t>=3&&t<=10) return `${n} ${few}`; return `${n} ${many}`; }
+function toast(m){ const t=$('#toast'); t.textContent=m; t.classList.add('on'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('on'),2200); }
+const IC = {
+  copy:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg>',
+  img:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg>',
+  x:'<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4zm-1.2 17.9h1.9L7.1 4.2h-2z"/></svg>'
+};
+function acts(kind, i, id, onDark){
+  const x = xUrl(id);
+  return `<div class="acts">
+    <button class="act" data-a="copy" data-k="${kind}" data-i="${i}">${IC.copy}نسخ</button>
+    <button class="act gold" data-a="card" data-k="${kind}" data-i="${i}">${IC.img}شاركها في الحالة</button>
+    ${x ? `<a class="act" href="${x}" target="_blank" rel="noopener">${IC.x}عرض على X</a>` : ''}
+  </div>`;
+}
+
+/* ===== التاريخ والأعداد ===== */
+$('#today').textContent = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura',{weekday:'long',timeZone:'Asia/Riyadh'}).format(new Date()) + ' ' + both(new Date());
+const real = a => a.filter(o => !o.sample).length;
+const counts = { books:BOOKS.length, quotes:real(QUOTES), thoughts:real(THOUGHTS) };
+document.querySelectorAll('[data-count]').forEach(el => { el.textContent = counts[el.dataset.count]; });
+
+/* ===== الكتب ===== */
+const newest = Math.max(...BOOKS.map(b => +dOf(b)));
+$('#shelf').innerHTML = BOOKS.map((b,i) => `
+  <button class="book" data-i="${i}" data-q="${esc(norm(b.title+' '+b.author+' '+b.text+' '+b.note+' '+b.cat))}">
+    <span class="cv"><img src="${b.cover}" alt="غلاف ${esc(b.title)}" loading="lazy">${+dOf(b)===newest ? '<span class="badge">جديد</span>' : ''}</span>
+    <span class="base" aria-hidden="true"></span>
+    <span><b>${esc(b.title)}</b><small>${esc(b.author)}</small></span>
+  </button>`).join('');
+
+const dlg = $('#dlg');
+$('#shelf').addEventListener('click', e => {
+  const el = e.target.closest('.book'); if(!el) return;
+  const b = BOOKS[+el.dataset.i];
+  $('#dlgBody').innerHTML = `
+    <div class="cv"><img src="${b.cover}" alt="غلاف ${esc(b.title)}"></div>
+    <div>
+      <h3 id="dlgTitle">${esc(b.title)}</h3>
+      <div class="by">${esc(b.author)} <span class="tagx">${esc(b.cat)}</span></div>
+      <p class="txt">${esc(b.text)}</p>
+      ${b.note ? `<p class="mine amiri">${esc(b.note)}</p>` : ''}
+      <div class="meta">${both(dOf(b))}</div>
+      ${acts('books', +el.dataset.i, b.id)}
+    </div>`;
+  dlg.showModal();
+});
+$('#dlgX').onclick = () => dlg.close();
+dlg.addEventListener('click', e => { if(e.target === dlg) dlg.close(); });
+
+/* ===== الاقتباسات ===== */
+$('#slides').innerHTML = QUOTES.map((q,i) => `
+  <div class="slide${q.sample?' sample':''}" data-i="${i}" data-q="${esc(norm(q.text+' '+q.book+' '+q.author))}" role="group" aria-label="اقتباس ${i+1}">
+    <blockquote>${esc(q.text)}</blockquote>
+    <div class="src">
+      ${q.cover ? `<img src="${q.cover}" alt="">` : ''}
+      <div><b>${esc(q.book)}</b><small>${esc(q.author)}${dOf(q) ? ' • ' + greg.format(dOf(q)) : ''}</small></div>
+    </div>
+    <div style="margin-top:24px">${q.sample ? '' : acts('quotes', i, q.id)}</div>
+  </div>`).join('');
+let cur = 0, vis = QUOTES.map((_,i)=>i);
+function show(n){
+  if(!vis.length) return;
+  cur = (n + vis.length) % vis.length;
+  document.querySelectorAll('.slide').forEach(s => s.classList.toggle('on', +s.dataset.i === vis[cur]));
+  $('#dots').innerHTML = vis.map((_,k) => `<button role="tab" aria-label="اقتباس ${k+1}" aria-selected="${k===cur}" class="${k===cur?'on':''}" data-k="${k}"></button>`).join('');
+}
+$('#dots').onclick = e => { const b = e.target.closest('button'); if(b) show(+b.dataset.k); };
+$('#next').onclick = () => show(cur + 1);
+$('#prev').onclick = () => show(cur - 1);
+let sx = null;
+$('#stage').addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+$('#stage').addEventListener('touchend', e => { if(sx===null) return; const dx = e.changedTouches[0].clientX - sx; if(Math.abs(dx) > 50) show(cur + (dx < 0 ? -1 : 1)); sx = null; });
+show(0);
+
+/* ===== الخواطر ===== */
+const TH = THOUGHTS.slice().sort((a,b) => dOf(b) - dOf(a));
+$('#journal').innerHTML = TH.map(t => {
+  const i = THOUGHTS.indexOf(t);
+  return `<article class="note${t.sample?' sample':''}" data-q="${esc(norm(t.text+' '+(t.ref||'')))}">
+    <time>${both(dOf(t))}</time>
+    <p>${esc(t.text)}</p>
+    ${t.ref ? `<div class="ref">${esc(t.ref)}</div>` : ''}
+    ${t.sample ? '' : acts('thoughts', i, t.id)}
+  </article>`; }).join('');
+
+/* ===== البحث ===== */
+const q = $('#q');
+function filter(){
+  const v = norm(q.value.trim());
+  $('#sbox').classList.toggle('has', !!v);
+  const hit = el => !v || el.dataset.q.includes(v);
+  let nb=0; document.querySelectorAll('.book').forEach(el => { const h=hit(el); el.classList.toggle('hidden',!h); nb+=h; });
+  $('#e-books').style.display = nb ? 'none' : 'block';
+  vis = []; document.querySelectorAll('.slide').forEach(el => { if(hit(el)) vis.push(+el.dataset.i); });
+  $('#stage').classList.toggle('hidden', !vis.length); $('#e-quotes').style.display = vis.length ? 'none' : 'block';
+  if(vis.length){ document.querySelectorAll('.slide').forEach(s=>s.classList.remove('on')); show(0); }
+  let nt=0; document.querySelectorAll('.note').forEach(el => { const h=hit(el); el.classList.toggle('hidden',!h); nt+=h; });
+  $('#e-thoughts').style.display = nt ? 'none' : 'block';
+}
+q.addEventListener('input', filter);
+$('#clr').onclick = () => { q.value=''; filter(); q.focus(); };
+const focusSearch = e => { e && e.preventDefault(); scrollTo({top:0,behavior:'smooth'}); setTimeout(()=>q.focus({preventScroll:true}),350); };
+$('#goSearch').onclick = focusSearch; $('#bsearch').onclick = focusSearch;
+
+/* ===== تمييز القسم الحالي ===== */
+const navs = document.querySelectorAll('[data-s]');
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if(en.isIntersecting) navs.forEach(a => a.classList.toggle('on', a.dataset.s === en.target.id));
+}), {rootMargin:'-45% 0px -50% 0px'});
+['books','quotes','thoughts'].forEach(id => io.observe(document.getElementById(id)));
+
+/* ===== النسخ وبطاقة الحالة ===== */
+const src = (k,i) => k==='books' ? BOOKS[i] : k==='quotes' ? QUOTES[i] : THOUGHTS[i];
+function plainText(k,o){
+  if(k==='books') return `${o.text}\n\n📖 ${o.title} — ${o.author}\n${SITE.name}`;
+  if(k==='quotes') return `«${o.text}»\n— ${o.book}، ${o.author}`;
+  return `${o.text}\n— ${SITE.name}`;
+}
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-a]'); if(!b) return;
+  const k = b.dataset.k, o = src(k, +b.dataset.i);
+  const txt = plainText(k,o) + `\n${SITE.url}`;
+  if(b.dataset.a === 'copy'){
+    try{ await navigator.clipboard.writeText(txt); toast('تم النسخ'); }catch(_){ toast('تعذّر النسخ'); }
+  } else { makeCard(k,o,txt); }
+});
+
+function wrap(ctx, text, maxW){
+  const out=[];
+  text.split('\n').forEach(par => {
+    let line='';
+    par.split(' ').forEach(w => { const t = line ? line+' '+w : w; if(ctx.measureText(t).width > maxW && line){ out.push(line); line=w; } else line=t; });
+    out.push(line);
+  });
+  return out;
+}
+const loadImg = s => new Promise(r => { const im = new Image(); im.onload=()=>r(im); im.onerror=()=>r(null); im.src=s; });
+async function makeCard(k,o,txt){
+  toast('جارٍ تجهيز الصورة…');
+  await document.fonts.load('700 40px Amiri'); await document.fonts.load('400 40px Amiri');
+  const W=1080, H=1920, c=document.createElement('canvas'); c.width=W; c.height=H;
+  const x=c.getContext('2d'); x.direction='rtl'; x.textAlign='right';
+  x.fillStyle='#17365D'; x.fillRect(0,0,W,H);
+  x.fillStyle='rgba(217,185,120,.16)'; for(let yy=40;yy<520;yy+=34) for(let xx=40;xx<W;xx+=34){ x.beginPath(); x.arc(xx,yy,2,0,7); x.fill(); }
+  x.fillStyle='#F7F3E8'; x.beginPath(); x.roundRect(60,300,W-120,H-560,40); x.fill();
+  x.fillStyle='#C9D5E6'; x.font='400 34px "IBM Plex Sans Arabic", sans-serif';
+  x.fillText(both(dOf(o) || new Date()), W-80, 200);
+  x.fillStyle='#D9B978'; x.font='700 220px Amiri'; x.textAlign='left'; x.fillText('”', 100, 520); x.textAlign='right';
+  let y = 470, pad = 140;
+  const cover = o.cover ? await loadImg(o.cover) : null;
+  if(cover){ const cw=230, ch=cw*cover.height/cover.width; x.save(); x.beginPath(); x.roundRect(W-pad-cw, 380, cw, Math.min(ch,320), 14); x.clip(); x.drawImage(cover, W-pad-cw, 380, cw, ch); x.restore(); y = 380 + Math.min(ch,320) + 70; }
+  let size = 54, lines;
+  for(;;){ x.font = `400 ${size}px Amiri`; lines = wrap(x, o.text, W-2*pad); if(lines.length*size*1.9 < H-560-(y-300)-260 || size<=34) break; size -= 2; }
+  x.fillStyle='#14243A';
+  lines.forEach(l => { y += size*1.9; x.fillText(l, W-pad, y); });
+  y += 70; x.fillStyle='#344F70'; x.font='700 40px Amiri';
+  const by = k==='books' ? `${o.title} — ${o.author}` : k==='quotes' ? `${o.book} — ${o.author}` : '';
+  if(by){ wrap(x,by,W-2*pad).forEach(l => { x.fillText(l, W-pad, y); y += 60; }); }
+  x.fillStyle='#FFFFFF'; x.font='700 64px Amiri'; x.fillText(SITE.name, W-80, H-150);
+  x.fillStyle='#D9B978'; x.font='400 32px "IBM Plex Sans Arabic", sans-serif'; x.fillText('المزيد في المدونة', W-80, H-90);
+  c.toBlob(async blob => {
+    const file = new File([blob], 'khaled-alwasel.jpg', {type:'image/jpeg'});
+    try{ navigator.clipboard && navigator.clipboard.writeText(txt).catch(()=>{}); }catch(_){}
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      try{ await navigator.share({files:[file], text:txt}); }catch(_){}
+    } else {
+      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=file.name; a.click();
+      toast('نزلت الصورة، ونُسخ الرابط');
+    }
+  }, 'image/jpeg', 0.9);
+}
+</script>
 </body>
 </html>
